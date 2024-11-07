@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'custom_text_field.dart';
+import '../widgets/custom_text_field.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -54,6 +54,7 @@ class LoginScreen extends StatelessWidget {
                   Navigator.pushNamed(context, '/signup');
                 },
                 child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       'Dont have an account?',
@@ -71,15 +72,14 @@ class LoginScreen extends StatelessWidget {
                   child: Divider(color: Colors.grey, thickness: 2),
                 ),
                 Padding(
-                  padding:  EdgeInsets.symmetric(horizontal: 8.0),
+                  padding: EdgeInsets.symmetric(horizontal: 8.0),
                   child: Text(
                     'OR',
                     style: TextStyle(color: Colors.black),
                   ),
                 ),
                 Expanded(
-                  child:
-                      Divider(color: Colors.grey, thickness: 2),
+                  child: Divider(color: Colors.grey, thickness: 2),
                 ),
               ]),
               Row(
@@ -90,11 +90,9 @@ class LoginScreen extends StatelessWidget {
                       // Handle Facebook login
                       print('Facebook button pressed');
                     },
-                    icon: const Icon(Icons.facebook,
-                        color: Colors.blue), 
+                    icon: const Icon(Icons.facebook, color: Colors.blue),
                     label: const Text('Facebook',
-                        style:
-                            TextStyle(color: Colors.black)),
+                        style: TextStyle(color: Colors.black)),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
                     ),
@@ -105,12 +103,11 @@ class LoginScreen extends StatelessWidget {
                       // Handle Google login
                       print('Google button pressed');
                     },
-                    icon: const Icon(Icons.g_translate,
-                        color: Colors.red),
+                    icon: const Icon(Icons.g_translate, color: Colors.red),
                     label: const Text('Google',
-                        style: TextStyle(color: Colors.black)), 
+                        style: TextStyle(color: Colors.black)),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white, 
+                      backgroundColor: Colors.white,
                     ),
                   ),
                 ],

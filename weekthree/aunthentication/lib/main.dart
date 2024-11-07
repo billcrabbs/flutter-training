@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'login_screen.dart';
-import 'signup_screen.dart';
+import 'src/features/Authentication/presentation/pages/signup_screen.dart';
+import 'src/features/Authentication/presentation/pages/login_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -12,11 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Login & Signup',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginScreen(),
+      home: const LoginScreen(),
       routes: {
         '/signup': (context) => const SignupScreen(),
       },
